@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Pusheen Mia 🐱</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#ffd6e8;
+}
+
+img{
+    width:350px;
+    cursor:pointer;
+    transition:0.2s;
+}
+
+img:active{
+    transform:scale(1.1);
+}
+</style>
+</head>
+<body>
+
+<img id="pusheen" src="pusheen.png" alt="Pusheen">
+
+<audio id="som">
+    <source src="miau.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const pusheen = document.getElementById("pusheen");
+const som = document.getElementById("som");
+
+pusheen.addEventListener("click", function(){
+    som.currentTime = 0;
+    som.play();
+});
+</script>
+
+</body>
+</html>
